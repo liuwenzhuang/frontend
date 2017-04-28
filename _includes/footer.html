@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <!--<h2 class="footer-heading">{{ site.title | escape }}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -23,8 +23,9 @@
       <div class="footer-col footer-col-2">
         <p>{{ site.description | escape }}</p>
       </div>
-    </div>
+    </div>-->
 
+    <h2 class="footer-heading">{{ site.title | escape }} - {{ site.author | escape }}</h2>
     <div class="footer-links">
       <ul>
         {% if site.github_username %}
@@ -46,7 +47,5 @@
         {% endif %}
       </ul>
     </div>
-
   </div>
-
 </footer>

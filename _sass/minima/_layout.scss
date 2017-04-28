@@ -95,6 +95,8 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  margin: $spacing-unit auto;
+  text-align: center;
 }
 
 .footer-heading {
@@ -103,7 +105,8 @@
 }
 
 .contact-list,
-.social-media-list {
+.social-media-list,
+.footer-links {
   list-style: none;
   margin-left: 0;
 }
@@ -154,6 +157,27 @@
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+.footer-links {
+  ul{
+    margin: 0;
+    padding:0;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+
+      a {
+        display: blcok;
+
+        img {
+          opacity: .8;
+          width: 22px;
+        }
+      }
+    }
   }
 }
 

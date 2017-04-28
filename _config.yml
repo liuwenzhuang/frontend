@@ -27,13 +27,13 @@ github_username:  liuwenzhuang
 codepen_username: liuwenzhuang
 csdn_usercode: u010730126
 
-origin: https://github.com/liuwenzhuang/frontend
+repository: liuwenzhuang/frontend
 
 # Build settings
 markdown: kramdown
 #theme: minima
-sass:
-  style: compressed #minify css
+#sass:
+#  style: compressed #minify css
 
 # paginate: 9
 # paginate_path: "/blog/page:num/"
