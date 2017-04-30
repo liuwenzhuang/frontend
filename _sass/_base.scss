@@ -23,6 +23,7 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  line-height: 1.5;
 }
 
 
@@ -37,6 +38,17 @@ ul, ol, dl, figure,
   margin-bottom: $spacing-unit / 2;
 }
 
+h1 {
+  line-height: 48px;
+  margin: 56px 0 48px 0;
+}
+
+/**
+ * Set 'transition'
+ */
+input, textarea, button, a {
+    transition: 0.2s color ease,0.2s background ease;
+}
 
 
 /**
@@ -94,13 +106,12 @@ a {
   color: $brand-color;
   text-decoration: none;
 
-  &:visited {
+  /*&:visited {
     color: darken($brand-color, 15%);
-  }
+  }*/
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: $brand-color;
   }
 }
 
@@ -132,7 +143,6 @@ code {
   font-size: 15px;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
 }
 
 code {
@@ -156,15 +166,14 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: $content-width;
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
+  @include media-query-max($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit / 2;
@@ -195,4 +204,40 @@ pre {
   path {
     fill: $grey-color;
   }
+}
+
+/**
+ * Buttons
+ */
+.button {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #b1b1b1;
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 13px 23px 13px 26px;
+  border-radius: 26px;
+
+  img {
+    width: 18px;
+  }
+}
+
+/**
+ * selection
+ */
+::selection {
+  background: $purple;
+  color: $white;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: $purple;
+  color: $white;
+  text-shadow: none;
+}
+::-webkit-selection {
+  background: $purple;
+  color: $white;
+  text-shadow: none;
 }
