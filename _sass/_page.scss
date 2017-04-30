@@ -85,3 +85,31 @@
   text-align: center;
   margin: 25px 0 0;
 }
+
+.pagination {
+    margin: 20px 0;
+    padding: 0 20px 20px 20px;
+    list-style-type: none;
+    @extend %clearfix;
+    @include media-query-max($on-palm) {
+        padding: 0 10px 10px 10px;
+    }
+
+    > li {
+        display: inline;
+        text-align: center;
+        list-style: none;
+        > a {
+            font-weight: 800;
+            line-height: 1.7;
+            color: #404040;
+            text-transform: uppercase;
+            @include media-query-max($on-palm) {
+                padding: 13px 8px 13px 8px;
+            }
+        }
+        > .next {
+            float: right;
+        }
+    }
+}

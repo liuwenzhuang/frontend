@@ -10,39 +10,6 @@ layout: default
 </header>
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
-<div class="home">
-
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <section class="post-item">
-        <header class="post-item-header">
-          <h1 class="post-item-title">
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-          </h1>
-          <span class="post-meta">
-            {{ post.date | date: "%b %-d, %Y" }}
-          </span>
-          <div class="post-meta-divider"></div>
-        </header>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-item-content" title="Read {{ post.title | escape }}">
-          <p>
-            {{ post.excerpt | strip_html | truncatewords: 30 }}
-          </p>
-        </a>
-        <div class="post-button">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="button" title="Read {{ post.title | escape }}">
-            Read more
-            <img src="{{ site.baseurl }}/img/icon/right-arrow.svg" alt="{{ post.title | escape }}">
-          </a>
-        </div>
-      </section>
-    {% endfor %}
-  </ul>
-
-  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
-
-</div>
+    {{ content }}
   </div>
 </main>
